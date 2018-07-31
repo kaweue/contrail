@@ -1,0 +1,21 @@
+resources:
+- kind: virtual_network
+  data:
+    virtual_network_properties:
+      forwarding_mode: l3
+      allow_transit: 
+      network_id: 
+      max_flow_rate: 
+      mirror_destination: false
+      vxlan_network_identifier: 
+      max_flows: 
+      rpf: 
+    fq_name: ["default-domain", "k8s-default", "vn_blue"]
+    address_allocation_mode: flat-subnet-only
+    parent_type: project
+    network_ipam_refs:
+    - to: ["default-domain", "k8s-default", "k8s-pod-ipam"]
+      attr:
+        ipam_subnets: []
+        host_routes: 
+    fabric_snat: false
