@@ -31,7 +31,7 @@ server:
   read_timeout: 10
   write_timeout: 5
   log_api: false
-  address: ":9091"
+  address: ":8082"
 
   # TLS Configuration
   tls:
@@ -101,7 +101,7 @@ server:
 #         type: memory
 #         expire: 3600
 #     insecure: true
-#     authurl: https://localhost:9091/keystone/v3
+#     authurl: https://localhost:8082/keystone/v3
 
 # disable authentication with no_auth true and comment out keystone configuraion.
 no_auth: true
@@ -117,7 +117,7 @@ client:
   project_id: admin
   domain_id: default
   schema_root: /public
-  endpoint: http://localhost:9091
+  endpoint: http://localhost:8082
 
 agent:
   enabled: true
@@ -183,6 +183,6 @@ replication:
         enabled: true
 
 cassandra:
-    host: localhost
-    port: 9042
+    host: 10.100.0.148
+    port: 9041
     timeout: 3600s

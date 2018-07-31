@@ -729,6 +729,7 @@ func resolveMapCollectionType(property, propertyType *JSONSchema) error {
 		return errors.Errorf("MapKey property missing for type %s", property.ID)
 	}
 	property.MapKeyProperty = itemType.Properties[property.MapKey]
+	propertyType.MapKeyProperty = itemType.Properties[property.MapKey]
 	return nil
 }
 
